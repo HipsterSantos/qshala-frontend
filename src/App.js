@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import React, {useState,useEffect} from 'react';
 import './App.css';
-
+import {default as useFetch} from './services/useFetch';
+import styled from 'styled-components'; 
+import {MainPage} from './pages/Main';
+const Container = styled.div `
+display:flex; 
+flex-direction: column;
+text-align: center;
+width:100%;
+`;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <MainPage/>
+    </Container>
   );
 }
 
